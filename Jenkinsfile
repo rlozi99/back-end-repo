@@ -82,13 +82,13 @@ pipeline {
                     steps {
                         script {
                             // kustomize를 사용하여 Kubernetes 구성 업데이트
-                            // dir('gitops') 블록을 제거합니다.
                             sh "kustomize edit set image ${CONTAINER_REGISTRY}/${REPO}=${CONTAINER_REGISTRY}/${REPO}:${TAG}"
                             sh "git add ."
                             sh "git commit -m 'Update image to ${TAG}'"
                         }
                     }
                 }
+                
         stage('Push Changes to GitOps Repository') {
             steps {
                 script {
