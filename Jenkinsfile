@@ -109,7 +109,7 @@ pipeline {
                         }
                         // 원격 저장소에서 최신 변경사항 가져오기
                         sh "git pull --rebase origin main"
-                        def remote = "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/JoEunSae/back-end.git"
+                        def remote = "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/rlozi99/back-end-repo.git"
                         // 원격 저장소에 푸시
                         sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/rlozi99/back-gitops.git main"
                     }
