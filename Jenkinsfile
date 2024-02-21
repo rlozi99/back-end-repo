@@ -88,6 +88,7 @@ pipeline {
                         }
                     }
                 }
+                
         stage('Push Changes to GitOps Repository') {
             steps {
                 script {
